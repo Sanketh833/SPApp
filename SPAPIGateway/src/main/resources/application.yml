@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      
+      - id: SPCUSTOMER
+        uri: lb://SPCUSTOMER
+        predicates:
+        - Path= /customer/**
+        
+      - id: SPROOMS
+        uri: lb://SPROOMS
+        predicates:
+         - Path= /room/**
+         
+      - id: SPADMIN
+        uri: lb://SPADMIN
+        predicates:
+        - Path= /admin/**
+        
+      - id: SPFOOD
+        uri: lb://SPFOOD
+        predicates:
+         - Path= /food/**
+           

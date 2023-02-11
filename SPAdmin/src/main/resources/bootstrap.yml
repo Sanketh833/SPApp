@@ -1,0 +1,18 @@
+
+server:
+  port: 8083
+  
+spring:
+  application:
+    name: SPADMIN
+  cloud:
+    consul:
+      config:
+        enabled: true 
+        prefix: config
+        default-context: application
+        profile-separator: '::'
+        data-key: data
+        format: yaml
+      
+      

@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  
+spring:
+  application:
+    name: SPCUSTOMER
+  cloud:
+    consul:
+      config:
+        enabled: true 
+        prefix: config
+        default-context: application
+        profile-separator: '::'
+        data-key: data
+        format: yaml
+      
+      
